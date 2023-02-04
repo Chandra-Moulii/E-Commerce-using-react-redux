@@ -1,0 +1,13 @@
+h1 {
+  margin: 1.5rem 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.productscontainer {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  justify-content: center;
+}
