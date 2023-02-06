@@ -1,6 +1,8 @@
 nav {
   display: flex;
   padding: 0.8rem 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
   background-color: #f1f7b5;
   align-items: center;
   justify-content: space-between;
@@ -73,4 +75,13 @@ input:focus {
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 50, "opsz" 48;
+}
+
+@media (max-width: 500px) {
+  nav {
+    padding: 0.8rem 1.5rem;
+  }
+  ul {
+    gap: 0.7rem;
+  }
 }

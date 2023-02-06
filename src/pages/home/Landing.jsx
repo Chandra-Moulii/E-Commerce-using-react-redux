@@ -3,7 +3,7 @@ import "../../assets/Landing.css";
 const Landing = () => {
   return (
     <div className="hero">
-      <img src={Landingpagepic} alt="cart" />
+      <img className="heroimg" src={Landingpagepic} alt="cart" />
       <h1>
         Shop like there is <br /> <span>no tommorow</span>
       </h1>
