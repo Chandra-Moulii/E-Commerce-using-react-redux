@@ -62,10 +62,34 @@ button.billbtn {
   font-size: unset;
 }
 
+.top {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  position: fixed;
+  bottom: 2rem;
+  right: 0.7rem;
+  user-select: none;
+  display: none;
+  border-radius: 50%;
+  background-color: #f1f7b5;
+  place-items: center;
+}
+
+.top:hover {
+  scale: 1.2;
+  transform: all 0.3s ease;
+}
+
+.top.active {
+  display: grid;
+}
+.top .material-symbols-outlined {
+  font-size: 2rem;
+}
+
 @media (max-width: 500px) {
   header h2 {
     font-size: 1.2rem;
     margin: 1.4rem 0;
-    text-align: left;
   }
 }

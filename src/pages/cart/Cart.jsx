@@ -1,12 +1,13 @@
 import "../../assets/Cart.css";
 import Cartitem from "./Cartitem";
 import OrderDetails from "./OrderDetails";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { removeall } from "../../Redux/Actions/actions";
 import { useSelector, useDispatch } from "react-redux";
 import { createPortal } from "react-dom";
 
 const Cart = () => {
+  const ref = useRef();
   const [visibile, setvisible] = useState(false);
   const dispatch = useDispatch();
   const products = useSelector((state) => state);
@@ -25,9 +26,19 @@ const Cart = () => {
   function handleClick() {
     dispatch(removeall());
   }
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 150) {
+        ref.current.className = "top active";
+      } else {
+        ref.current.className = "top";
+      }
+    });
+  }, []);
   return (
     <>
-      <header>
+      <header id="top">
         <h2>Cart items ({itemsincart.length})</h2>
         {itemsincart.length > 0 ? (
           <a href="#" onClick={handleClick}>
@@ -56,6 +67,11 @@ const Cart = () => {
           )}
         </>
       )}
+      <a href="#top">
+        <div ref={ref} className="top">
+          <span className="material-symbols-outlined">expand_less</span>
+        </div>
+      </a>
     </>
   );
 };
