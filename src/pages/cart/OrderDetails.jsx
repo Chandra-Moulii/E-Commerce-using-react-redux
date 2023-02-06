@@ -25,7 +25,7 @@ const OrderDetails = ({ visibile: { visibile, setvisible }, data }) => {
   function handlepayment() {
     ref.current.innerText = "Success";
     setTimeout(() => {
-      ref.current.innerText = "Continue to payment";
+      ref.current.innerText = "Buy";
     }, 3000);
   }
 
@@ -45,7 +45,7 @@ const OrderDetails = ({ visibile: { visibile, setvisible }, data }) => {
               Close
             </button>
             <button className="paymentbtn" ref={ref} onClick={handlepayment}>
-              Continue to payment
+              Buy
             </button>
             <button className="print" onClick={handleClick}>
               Print

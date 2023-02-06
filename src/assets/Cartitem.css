@@ -1,7 +1,6 @@
 .carItem {
   width: 15rem;
   user-select: none;
-
   height: 20rem;
   position: relative;
 }
@@ -73,4 +72,11 @@ button:hover {
 
 .info .offer {
   color: rgb(231, 150, 0);
+}
+
+@media (max-width: 500px) {
+  .carItem {
+    width: 20rem;
+    height: 25rem;
+  }
 }

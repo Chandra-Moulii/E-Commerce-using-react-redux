@@ -6,7 +6,8 @@
 
 .modalwrapper {
   inset: 0;
-  margin: auto 1rem;
+  width: 40vw;
+  margin: auto;
   text-align: center;
   z-index: 100;
   max-height: 700px;
@@ -64,4 +65,16 @@ p.total {
   color: green;
   margin: 1rem;
   font-size: 1.3rem;
+}
+
+@media (max-width: 900px) {
+  .modalwrapper {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .modalwrapper {
+    width: max-content;
+  }
 }
