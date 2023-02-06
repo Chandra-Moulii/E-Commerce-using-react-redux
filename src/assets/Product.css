@@ -81,4 +81,8 @@
     display: block;
     bottom: 9.5%;
   }
+  .image:hover img {
+    scale: 1;
+    opacity: 1;
+  }
 }
