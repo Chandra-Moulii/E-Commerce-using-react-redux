@@ -39,7 +39,7 @@ const Cart = () => {
       {itemsincart.length == 0 ? (
         <div className="warning">
           <p>No items in cart please shop something!!</p>
-          <a href="/">Back to shop</a>
+          <a href="/products">Back to shop</a>
         </div>
       ) : (
         <>
