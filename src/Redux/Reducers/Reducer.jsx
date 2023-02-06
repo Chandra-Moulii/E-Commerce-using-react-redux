@@ -11,6 +11,8 @@ import shoes from "../../assets/images/shoes.jpg";
 import watch from "../../assets/images/watch.jpg";
 import macbook from "../../assets/images/macbook.jpg";
 import wallet from "../../assets/images/wallet.jpg";
+import flowerpot from "../../assets/images/flowerpot.jpg";
+import sonycamera from "../../assets/images/sonycamera.jpg";
 
 var data = localStorage.getItem("products");
 if (data == null) {
@@ -62,6 +64,15 @@ if (data == null) {
     },
     {
       id: crypto.randomUUID(),
+      item: flowerpot,
+      offer: false,
+      name: "Flower pot",
+      price: 90,
+      outOfStock: false,
+      itemsInCart: 0,
+    },
+    {
+      id: crypto.randomUUID(),
       item: airpods,
       offer: false,
       name: "Apple airpods",
@@ -102,6 +113,15 @@ if (data == null) {
       offer: false,
       name: "Wallet",
       price: 20,
+      outOfStock: false,
+      itemsInCart: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      item: sonycamera,
+      offer: false,
+      name: "Sony camera",
+      price: 3000,
       outOfStock: false,
       itemsInCart: 0,
     },

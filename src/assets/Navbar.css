@@ -10,6 +10,31 @@ a {
   font-size: 1.2rem;
   text-decoration: none;
 }
+
+/* a:focus {
+  outline: 2px solid black;
+  outline-offset: 5px;
+} */
+
+.cart {
+  position: relative;
+}
+
+.totalitemsincart {
+  color: white;
+  width: 1rem;
+  font-size: 0.7rem;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  position: absolute;
+  background-color: black;
+}
+
 ul {
   list-style: none;
 }
@@ -27,7 +52,6 @@ ul li {
 }
 
 ul li:hover {
-  opacity: 0.5;
   text-underline-offset: 5px;
   text-decoration-thickness: 1px;
   text-decoration: underline;
@@ -45,4 +69,8 @@ input {
 
 input:focus {
   outline: 2px solid black;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 50, "opsz" 48;
 }

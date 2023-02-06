@@ -1,18 +1,22 @@
 import "../../assets/Cart.css";
+import Cartitem from "./Cartitem";
+import OrderDetails from "./OrderDetails";
+import { useState } from "react";
 import { removeall } from "../../Redux/Actions/actions";
 import { useSelector, useDispatch } from "react-redux";
-import Cartitem from "./Cartitem";
+import { createPortal } from "react-dom";
 
 const Cart = () => {
+  const [visibile, setvisible] = useState(false);
   const dispatch = useDispatch();
   const products = useSelector((state) => state);
   const itemsincart = products.filter((item) => item.itemsInCart > 0);
   const cartitems = itemsincart.map(
-    ({ id, item, offer, itemsInCart, name, price }) => {
+    ({ id, item, offer, itemsInCart, outOfStock, name, price }) => {
       return (
         <Cartitem
           key={id}
-          props={{ id, item, offer, itemsInCart, name, price }}
+          props={{ id, item, offer, itemsInCart, outOfStock, name, price }}
         />
       );
     }
@@ -24,9 +28,11 @@ const Cart = () => {
   return (
     <>
       <header>
-        <h1>Your items in cart ({itemsincart.length})</h1>
+        <h2>Cart items ({itemsincart.length})</h2>
         {itemsincart.length > 0 ? (
-          <span onClick={handleClick}>Clear cart</span>
+          <a href="#" onClick={handleClick}>
+            Clear
+          </a>
         ) : null}
       </header>
 
@@ -38,7 +44,16 @@ const Cart = () => {
       ) : (
         <>
           <div className="cartItemWrapper">{cartitems}</div>
-          <button className="billbtn">Buy and generate bill</button>
+          <button className="billbtn" onClick={() => setvisible(true)}>
+            Buy and generate bill
+          </button>
+          {createPortal(
+            <OrderDetails
+              visibile={{ visibile, setvisible }}
+              data={itemsincart}
+            />,
+            document.body
+          )}
         </>
       )}
     </>

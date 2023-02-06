@@ -3,7 +3,9 @@ import { useDispatch } from "react-redux";
 import { addtocart } from "../../Redux/Actions/actions";
 import { removefromcart } from "../../Redux/Actions/actions";
 
-const Cartitem = ({ props: { id, item, offer, itemsInCart, name, price } }) => {
+const Cartitem = ({
+  props: { id, item, offer, itemsInCart, outOfStock, name, price },
+}) => {
   const dispatch = useDispatch();
   function handledecrement() {
     dispatch(removefromcart(id));
@@ -16,7 +18,10 @@ const Cartitem = ({ props: { id, item, offer, itemsInCart, name, price } }) => {
       <div>
         <div className="carItem">
           <img src={item} alt={name} />
-          <p className="totalprice">Total ${price * itemsInCart}</p>
+          <p className="banner totalprice">Total ${price * itemsInCart}</p>
+          {outOfStock ? (
+            <p className="banner outofstock">Out of stock</p>
+          ) : null}
         </div>
         <div className="info">
           {offer ? (
