@@ -1,0 +1,67 @@
+.overlay {
+  inset: 0;
+  position: fixed;
+  background-color: rgba(23, 23, 23, 0.618);
+}
+
+.modalwrapper {
+  inset: 0;
+  margin: auto 1rem;
+  text-align: center;
+  z-index: 100;
+  max-height: 700px;
+  overflow-y: auto;
+  height: max-content;
+  padding: 1rem;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+}
+
+.modalwrapper p.itemtitle {
+  font-size: 1.3rem;
+  opacity: 0.6;
+  margin: 1rem;
+}
+
+h1 {
+  margin-top: 1rem;
+}
+
+hr {
+  margin: 1rem;
+  border: 0;
+  height: 1px;
+  background: #848484;
+  background-image: linear-gradient(to right, #ccc, #aeaeae, #dedede);
+}
+
+.closemodal,
+.print {
+  font-size: unset;
+  font-family: unset;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.paymentbtn {
+  font-size: unset;
+  font-family: unset;
+  padding: 0.5rem 1rem;
+}
+
+.details {
+  margin: 0.5rem 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.details .price {
+  cursor: default;
+  color: green;
+}
+
+p.total {
+  color: green;
+  margin: 1rem;
+  font-size: 1.3rem;
+}
