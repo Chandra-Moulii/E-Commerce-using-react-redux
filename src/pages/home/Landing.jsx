@@ -8,9 +8,9 @@ const Landing = () => {
         Shop like there is <br /> <span>no tommorow</span>
       </h1>
       <p>A best place for all you home needs and appliances.</p>
-      <button>
-        <a href="/products">Shop Now</a>
-      </button>
+      <a href="/products">
+        <button>Shop Now</button>
+      </a>
     </div>
   );
 };
