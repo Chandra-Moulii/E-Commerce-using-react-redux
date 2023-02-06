@@ -45,7 +45,7 @@ const Cart = () => {
         <>
           <div className="cartItemWrapper">{cartitems}</div>
           <button className="billbtn" onClick={() => setvisible(true)}>
-            Buy and generate bill
+            Generate bill
           </button>
           {createPortal(
             <OrderDetails

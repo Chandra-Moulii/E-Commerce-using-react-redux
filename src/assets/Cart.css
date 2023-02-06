@@ -61,3 +61,11 @@ button.billbtn {
   padding: 0.5rem 1rem;
   font-size: unset;
 }
+
+@media (max-width: 500px) {
+  header h2 {
+    font-size: 1rem;
+    margin: 1.4rem 0;
+    text-align: left;
+  }
+}
